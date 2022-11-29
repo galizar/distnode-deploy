@@ -2,10 +2,11 @@ version: 2.1
 
 jobs:
   build:
-    working_directory: ~/distnode-deploy
+    working_directory: ~/project
     docker:
       - image: cimg/node:19.1.0
     steps:
+      - checkout
       - run: npm install
       - run: PORT=0 npm test 
   
