@@ -6,8 +6,6 @@ jobs:
     docker:
       - image: cimg/node:19.1.0
     steps:
-      - checkout:
-        path: ~/
       - run: npm install 
       - run: PORT=0 npm test 
   
